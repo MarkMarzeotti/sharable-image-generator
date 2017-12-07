@@ -1,0 +1,31 @@
+{
+  "name": "sp-barney",
+  "version": "1.0.0",
+  "description": "Custom WP theme developed for EriDesign for SP Barney.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://codeserver.dev.b7047444-08c3-4320-8ede-5be60057593f@codeserver.dev.b7047444-08c3-4320-8ede-5be60057593f.drush.in:2222/~/repository.git"
+  },
+  "author": "Mark Marzeotti",
+  "license": "ISC",
+  "dependencies": {
+    "bourbon": "^4.3.4",
+    "bourbon-neat": "^2.1.0",
+    "browserify-fs": "^1.0.0",
+    "file-system": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-include": "^2.3.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5",
+    "node-neat": "^2.0.0-beta.0"
+  }
+}
