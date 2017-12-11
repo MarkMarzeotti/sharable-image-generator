@@ -1,5 +1,8 @@
+var pageLink = 'https://sig.markmarzeotti.com/';
+// var pageLink = 'http://localhost:8888/personal/sharable-image-generator/';
+
 var a2a_config = a2a_config || {};
-a2a_config.linkurl = "https://sig.markmarzeotti.com/assets/img/generator-bg.png";
+a2a_config.linkurl = pageLink + "assets/img/generator-bg.png";
 
 a2a_config.templates = a2a_config.templates || {};
 
@@ -34,14 +37,7 @@ window.onload = function(){
 
       var canvasData = canvas.toDataURL("image/png");
 
-      // genBucket.innerHTML = '<img src="' + canvasData + '">';
-
       var base64Image = canvasData.split(';base64,').pop();
-
-      // var imagedata = {
-      //   image: base64Image,
-      //   screenname: screenname
-      // };
 
       // Fire off the request to save.php
       request = $.ajax({
@@ -51,18 +47,18 @@ window.onload = function(){
           dataType: "html"
       });
 
-      // Callback handler that will be called on success
       request.done(function (response, textStatus, jqXHR){
           // Log a message to the console
           console.log("image created");
 
           // next we need to update all the share meta
-          $('.a2a_kit').attr('data-a2a-url', 'https://sig.markmarzeotti.com/?screenname=' + screenname);
+          $('.a2a_kit').attr('data-a2a-url', pageLink + '?screenname=' + screenname);
+          a2a_config.linkurl = pageLink + "?screenname=" + screenname;
 
-          a2a_config.linkurl = "https://sig.markmarzeotti.com/?screenname=" + screenname;
+          genBucket.innerHTML = '<img src="' + pageLink + 'generated/' + screenname + '.png">';
+          $('.create-image').remove();
       });
 
-      // Callback handler that will be called on failure
       request.fail(function (jqXHR, textStatus, errorThrown){
           // Log the error to the console
           console.error(

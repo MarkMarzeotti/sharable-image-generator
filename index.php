@@ -58,8 +58,7 @@
             <div class="vertical-middle">
                 <div class="row">
                     <div class="column text-center">
-                        <div id="gen-bucket"></div>
-                        Sharable Image Generator
+                        <h1>Sharable Image Generator</h1>
                         <canvas id="canvas" width="1200" height="630"></canvas>
                         <?php if ($screenname) { ?>
                         <div class="created-image">
@@ -67,6 +66,7 @@
                         </div>
                         <a href="<?php echo $pageLink; ?>">Create Yours!</a>
                         <?php } else { ?>
+                        <div id="gen-bucket"></div>
                         <div class="create-image">
                             <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
                             <form class="image-generator" id="bury" action="<?php echo $pageLink; ?>">
